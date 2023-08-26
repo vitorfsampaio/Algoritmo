@@ -1,8 +1,8 @@
 Algoritmo "Atividade 3"
 Var
    digito, contador, quantidade: inteiro
-   nome, email, cargo, setor: vetor[1..20] de caractere
-   matricula, cpf, salario, transporte, alimentacao, filhos: vetor[1..20] de real
+   nome, email, cargo, setor, filhos: vetor[1..20] de caractere
+   matricula, cpf, salario, transporte, alimentacao: vetor[1..20] de real
 Inicio
    escreval("Bem-vindo a LDD Corporation.")
    escreval("")
@@ -41,8 +41,8 @@ Inicio
       fimpara
 
       para contador de 1 ate quantidade passo 1 faca
-           se (filhos[contador] == "sim") entao
-              salario[contador] = salario[contador] + 125
+           se (filhos[contador] = "sim") ou (filhos[contador] = "s") ou (filhos[contador] = "S") ou (filhos[contador] = "Sim") entao
+              salario[contador] <- salario[contador] + 125
               fimse
          escreval("Funcionário: ", nome[contador])
          escreval("Matrícula:", matricula[contador])
